@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To-do list</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .hidden{
+            display: none;
+        }
+    .container{
+        width: 100vw;
+        height: 100vh;
+        background: rgb(21,76,121);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center ;
+    
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center  ;
+        background: rgb(6,57,112);
+        border: 1.5px solid ;
+        border-radius: 30px;
+        padding: 10px 30px 30px 30px;
+        
+    }
+    h1{
+        margin-top: 0;
+        color: white;
+        font-size: 2rem;
+        font-family:monospace;
+    }
+    #newTask{
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-color: black;
+      
+        
+    }
+    #firstButton{
+       background-color: none;
+       border-radius: 5px;
+       font-family: monospace;
+    }
+    #list{
+        padding-right: 180px;
+        margin-left: 0;
+    }
+    .li{
+        list-style-type: upper-roman;
+        font-size: large;
+        font-family: monospace;
+        color:whitesmoke;
+    }
+    #newdiv{
+        position: relative;
+    }
+    #editText{
+        color: white;
+        font-family: monospace;
+        font-size: x-large;
+    }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="box">
+            <h1>Lista de tarefa</h1>
+            <input id="newTask" type="text">
+            <button id="firstButton" onclick="createTask()">Incluir</button>
+        
+            <div id="list" >
+
+            </div>
+            <div id="newdiv" class="hidden">          
+                <label id="editText">Edite o item:</label>
+                <input id="newLi"  type="text"></input>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js" ></script>
+</body>
+</html>
